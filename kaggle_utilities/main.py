@@ -52,7 +52,7 @@ class KaggleDataset:
         if isinstance(model_root, str):
             self.model_root = Path(model_root)
         elif isinstance(model_root, Path):
-            self.model_root = moel_root
+            self.model_root = model_root
         self.name = name
 
         assert not (self.model_root/self.name).exists(), "Folder of output model is already exists."
