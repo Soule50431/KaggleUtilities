@@ -55,8 +55,8 @@ class KaggleDataset:
             self.model_root = model_root
         self.name = name
 
-        assert not (self.model_root/self.name).exists(), "Folder of output model is already exists."
-        (self.model_root/self.name).mkdir(parents=True)
+        # assert not (self.model_root/self.name).exists(), "Folder of output model is already exists."
+        (self.model_root/self.name).mkdir(exist_ok=True, parents=True)
 
     def _run(self, *commands):
         for command in commands:
